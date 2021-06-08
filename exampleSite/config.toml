@@ -1,118 +1,51 @@
-baseURL = "https://example.com"
-
-languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "Hugo Techdoc Theme"
-theme = "hugo-theme-techdoc"
-
-hasCJKLanguage = true
-metaDataFormat = "yaml"
-
+baseURL = "https://example.com"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir= false
+defaultContentLanguageInSubdir = false
 enableMissingTranslationPlaceholders = false
-
-[params]
-
-    # Source Code repository section
-    description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.9.7"
-
-    # Documentation repository section
-    # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-
-    # Analytic section
-    google_analytics_id = "" # Your Google Analytics tracking id
-    tag_manager_container_id = "" # Your Google Tag Manager container id
-    google_site_verification = "" # Your Google Site Verification for Search Console
-
-    # Open Graph and Twitter Cards settings section
-    # Open Graph settings for each page are set on the front matter.
-    # See https://gohugo.io/templates/internal/#open-graph
-    # See https://gohugo.io/templates/internal/#twitter-cards
-    title = "Hugo Techdoc Theme"
-    images = ["images/og-image.png"] # Open graph images are placed in `static/images`
-
-    # Theme settings section
-    # Theme color
-    # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
-    custom_font_color = ""
-    custom_background_color = ""
-
-    # Documentation Menu section
-    # Menu style settings
-    menu_style = "open-menu" # "open-menu" or "slide-menu" or "" blank is as no sidebar
-
-    # Date format
-    dateformat = "" # default "2 Jan 2006"
-    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
-
-    # path name excluded from documentation menu
-    menu_exclusion = [
-        "archives",
-        "archive",
-        "blog",
-        "entry",
-        "post",
-        "posts",
-    ]
-
-    # Algolia site search section
-    # See https://www.algolia.com/doc/
-    algolia_search_enable = true
-    algolia_indexName = "hugo-demo-techdoc"
-    algolia_appId = "7W4SAN4PLK"
-    algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128" # Search-Only API Key
-
-# Global menu section
-# See https://gohugo.io/content-management/menus/
-[menu]
-    [[menu.main]]
-        name = "Home"
-        url = "/"
-        weight = 1
-
-    [[menu.main]]
-        name = "Twitter"
-        url = "https://twitter.com/thingsym"
-        weight = 2
-
-# Markup configure section
-# See https://gohugo.io/getting-started/configuration-markup/
+hasCJKLanguage = true
+languageCode = "en-us"
+metaDataFormat = "yaml"
+theme = "hugo-theme-techdoc"
+title = "Hugo Techdoc Theme"
 [markup]
-    defaultMarkdownHandler = "goldmark"
-    [markup.goldmark.renderer]
-        unsafe= true
-    [markup.tableOfContents]
-        startLevel = 2
-        endLevel = 6
-        ordered = false
-
-[outputs]
-    home = ["HTML", "RSS", "Algolia"]
-
-# Algolia Search configure section
+defaultMarkdownHandler = "goldmark"
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+endLevel = 6
+ordered = false
+startLevel = 2
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 [outputFormats.Algolia]
-    baseName = "algolia"
-    mediaType = "application/json"
-    isPlainText = true
-    notAlternative = true
-
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+[params]
+algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128"
+algolia_appId = "7W4SAN4PLK"
+algolia_indexName = "hugo-demo-techdoc"
+algolia_search_enable = true
+custom_background_color = ""
+custom_font_color = ""
+dateformat = ""
+description = "put your description"
+github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+google_analytics_id = ""
+google_site_verification = ""
+images = ["images/og-image.png"]
+menu_exclusion = ["archives", "archive", "blog", "entry", "post", "posts"]
+menu_style = "open-menu"
+tag_manager_container_id = ""
+title = "Hugo Techdoc Theme"
+version = "0.9.7"
 [params.algolia]
-    vars = [
-        "title",
-        "summary",
-        "content",
-        "date",
-        "publishdate",
-        "description",
-        "permalink",
-        "keywords",
-        "lastmod",
-    ]
-    params = [
-        "tags",
-        "categories",
-    ]
+params = ["tags", "categories"]
+vars = ["title", "summary", "content", "date", "publishdate", "description", "permalink", "keywords", "lastmod"]
