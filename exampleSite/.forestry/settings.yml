@@ -20,26 +20,6 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: exampleSite/content/chapter2
-  label: Chapter2
-  create: all
-  match: "**/*"
-- type: directory
-  path: exampleSite/content/chapter3
-  label: Chapter3
-  create: all
-  match: "**/*"
-- type: directory
-  path: exampleSite/content/chapter4
-  label: Chapter4
-  create: all
-  match: "**/*"
-- type: directory
-  path: exampleSite/content/entry
-  label: Entry
-  create: all
-  match: "**/*"
-- type: directory
   path: exampleSite/content/getting-started
   label: Getting started
   create: all
@@ -47,16 +27,6 @@ sections:
 - type: directory
   path: exampleSite/content/post
   label: Post
-  create: all
-  match: "**/*"
-- type: directory
-  path: exampleSite/content/posts
-  label: Posts
-  create: all
-  match: "**/*"
-- type: directory
-  path: exampleSite/content/sample
-  label: Sample
   create: all
   match: "**/*"
 - type: directory
